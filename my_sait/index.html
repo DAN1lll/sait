@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Разработка сайтов под ключ. Создание лендингов, корпоративных сайтов, интернет-магазинов. Индивидуальный подход, адаптивный дизайн, SEO-оптимизация.">
+    <meta name="keywords" content="разработка сайтов, создание сайтов, веб-разработчик, лендинг, корпоративный сайт">
+    <meta name="author" content="Ваше Имя">
+    <title>Веб-разработчик | Создание сайтов под ключ</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Шапка -->
+    <header class="header">
+        <div class="container">
+            <nav class="navbar">
+                <div class="logo">
+                    <a href="index.html">
+                        <span class="logo-bracket">&lt;</span>
+                        <span class="logo-text">WebDev</span>
+                        <span class="logo-bracket">/&gt;</span>
+                    </a>
+                </div>
+                <button class="mobile-menu-btn" id="mobileMenuBtn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="index.html" class="active">Главная</a></li>
+                    <li><a href="services.html">Услуги</a></li>
+                    <li><a href="portfolio.html">Портфолио</a></li>
+                    <li><a href="contact.html">Контакты</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Герой секция -->
+        <section class="hero">
+            <div class="container">
+                <div class="hero-wrapper">
+                    <div class="hero-content">
+                        <div class="hero-badge">
+                            <span class="badge-dot"></span>
+                            Доступен для новых проектов
+                        </div>
+                        <h1 class="hero-title">
+                            Создаю сайты,<br>
+                            которые <span class="highlight">работают</span>
+                        </h1>
+                        <p class="hero-description">
+                            Разработка сайтов под ключ: от лендинга до интернет-магазина. 
+                            Адаптивный дизайн, быстрая загрузка, SEO-оптимизация — всё, 
+                            что нужно для успеха вашего бизнеса в интернете.
+                        </p>
+                        <div class="hero-buttons">
+                            <a href="contact.html" class="btn btn-primary">Заказать сайт</a>
+                            <a href="portfolio.html" class="btn btn-outline">Портфолио →</a>
+                        </div>
+                        <div class="hero-stats">
+                            <div class="stat">
+                                <span class="stat-number">5+</span>
+                                <span class="stat-label">лет опыта</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-number">50+</span>
+                                <span class="stat-label">проектов</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-number">100%</span>
+                                <span class="stat-label">довольных клиентов</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="hero-code">
+                        <div class="code-window">
+                            <div class="code-header">
+                                <span class="code-dot red"></span>
+                                <span class="code-dot yellow"></span>
+                                <span class="code-dot green"></span>
+                                <span class="code-title">portfolio.tsx</span>
+                            </div>
+                            <div class="code-content">
+                                <pre><code><span class="code-keyword">function</span> <span class="code-function">Developer</span>() {
+  <span class="code-keyword">const</span> skills = [<span class="code-string">'React'</span>, <span class="code-string">'TypeScript'</span>, <span class="code-string">'Node.js'</span>];
+  
+  <span class="code-keyword">return</span> (
+    <span class="code-tag">&lt;Developer</span>
+      <span class="code-attr">experience</span>=<span class="code-string">"5+ years"</span>
+      <span class="code-attr">clients</span>=<span class="code-string">"50+ satisfied"</span>
+    <span class="code-tag">/&gt;</span>
+  );
+}</code></pre>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Технологии -->
+        <section class="tech-stack">
+            <div class="container">
+                <p class="tech-label">Работаю с современными технологиями</p>
+                <div class="tech-grid">
+                    <div class="tech-item">
+                        <div class="tech-icon">⚛️</div>
+                        <span>React</span>
+                    </div>
+                    <div class="tech-item">
+                        <div class="tech-icon">📘</div>
+                        <span>TypeScript</span>
+                    </div>
+                    <div class="tech-item">
+                        <div class="tech-icon">🟢</div>
+                        <span>Node.js</span>
+                    </div>
+                    <div class="tech-item">
+                        <div class="tech-icon">🐍</div>
+                        <span>Python</span>
+                    </div>
+                    <div class="tech-item">
+                        <div class="tech-icon">💻</div>
+                        <span>PHP</span>
+                    </div>
+                    <div class="tech-item">
+                        <div class="tech-icon">🗄️</div>
+                        <span>MySQL</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Услуги кратко -->
+        <section class="services-short">
+            <div class="container">
+                <h2 class="section-title">Что я создаю</h2>
+                <div class="services-grid-short">
+                    <div class="service-card">
+                        <div class="service-icon">🌐</div>
+                        <h3>Сайт-визитка</h3>
+                        <p>Идеальное решение для малого бизнеса, фрилансеров и стартапов</p>
+                        <div class="service-price">от 15 000 ₽</div>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon">📈</div>
+                        <h3>Лендинг</h3>
+                        <p>Продающая страница для вашего продукта или услуги</p>
+                        <div class="service-price">от 20 000 ₽</div>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon">🏢</div>
+                        <h3>Корпоративный сайт</h3>
+                        <p>Полноценный сайт для компании с каталогом и новостями</p>
+                        <div class="service-price">от 35 000 ₽</div>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon">🛒</div>
+                        <h3>Интернет-магазин</h3>
+                        <p>Полноценная торговая платформа с корзиной и оплатой</p>
+                        <div class="service-price">от 60 000 ₽</div>
+                    </div>
+                </div>
+                <div class="text-center">
+                    <a href="services.html" class="btn btn-secondary">Все услуги →</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Преимущества работы со мной -->
+        <section class="advantages">
+            <div class="container">
+                <h2 class="section-title">Почему выбирают меня</h2>
+                <div class="advantages-grid">
+                    <div class="advantage-item">
+                        <div class="advantage-number">01</div>
+                        <h3>Индивидуальный подход</h3>
+                        <p>Каждый проект уникален. Я не использую шаблоны — создаю дизайн специально под ваши задачи.</p>
+                    </div>
+                    <div class="advantage-item">
+                        <div class="advantage-number">02</div>
+                        <h3>Адаптивность</h3>
+                        <p>Сайты отлично выглядят на всех устройствах: от смартфонов до 4K-мониторов.</p>
+                    </div>
+                    <div class="advantage-item">
+                        <div class="advantage-number">03</div>
+                        <h3>SEO-оптимизация</h3>
+                        <p>Код сайта сразу готов к продвижению в поисковых системах.</p>
+                    </div>
+                    <div class="advantage-item">
+                        <div class="advantage-number">04</div>
+                        <h3>Быстрая загрузка</h3>
+                        <p>Оптимизация изображений и кода для максимальной скорости.</p>
+                    </div>
+                    <div class="advantage-item">
+                        <div class="advantage-number">05</div>
+                        <h3>Поддержка 24/7</h3>
+                        <p>После запуска я всегда на связи для решения любых вопросов.</p>
+                    </div>
+                    <div class="advantage-item">
+                        <div class="advantage-number">06</div>
+                        <h3>Безопасность</h3>
+                        <p>SSL-сертификаты, защита от взлома, регулярные бэкапы.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Процесс работы -->
+        <section class="process">
+            <div class="container">
+                <h2 class="section-title">Как мы работаем</h2>
+                <div class="process-steps">
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <h3>Брифинг</h3>
+                        <p>Обсуждаем задачи, цели и пожелания</p>
+                    </div>
+                    <div class="step-arrow">→</div>
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <h3>Прототип</h3>
+                        <p>Создаём структуру и макет сайта</p>
+                    </div>
+                    <div class="step-arrow">→</div>
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <h3>Дизайн</h3>
+                        <p>Разрабатываем уникальный дизайн</p>
+                    </div>
+                    <div class="step-arrow">→</div>
+                    <div class="step">
+                        <div class="step-number">4</div>
+                        <h3>Вёрстка</h3>
+                        <p>Превращаем дизайн в рабочий сайт</p>
+                    </div>
+                    <div class="step-arrow">→</div>
+                    <div class="step">
+                        <div class="step-number">5</div>
+                        <h3>Запуск</h3>
+                        <p>Тестирование и публикация на сервере</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Отзывы -->
+        <section class="reviews">
+            <div class="container">
+                <h2 class="section-title">Отзывы клиентов</h2>
+                <div class="reviews-grid">
+                    <div class="review-card">
+                        <div class="review-text">
+                            "Заказал лендинг для своего бизнеса. Всё сделано качественно, быстро и в срок. 
+                            После запуска продажи выросли на 40%. Рекомендую!"
+                        </div>
+                        <div class="review-author">
+                            <strong>Алексей</strong>
+                            <span>Владелец стоматологии</span>
+                        </div>
+                    </div>
+                    <div class="review-card">
+                        <div class="review-text">
+                            "Отличный специалист! Создал интернет-магазин под ключ. 
+                            Все мои пожелания учтены, поддержка после запуска на высоте."
+                        </div>
+                        <div class="review-author">
+                            <strong>Екатерина</strong>
+                            <span>Владелец магазина одежды</span>
+                        </div>
+                    </div>
+                    <div class="review-card">
+                        <div class="review-text">
+                            "Сайт-визитку сделали за 5 дней. Очень доволен результатом, 
+                            всё современно и удобно. Буду рекомендовать знакомым."
+                        </div>
+                        <div class="review-author">
+                            <strong>Михаил</strong>
+                            <span>Фотограф</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA секция -->
+        <section class="cta">
+            <div class="container">
+                <div class="cta-wrapper">
+                    <h2>Готов начать проект?</h2>
+                    <p>Оставьте заявку, и я свяжусь с вами в течение 24 часов</p>
+                    <a href="contact.html" class="btn btn-primary btn-large">Обсудить проект →</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Подвал -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <div class="footer-logo">
+                        <span class="logo-bracket">&lt;</span>
+                        <span>WebDev</span>
+                        <span class="logo-bracket">/&gt;</span>
+                    </div>
+                    <p>Создаю сайты, которые помогают бизнесу расти</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4>Навигация</h4>
+                        <ul>
+                            <li><a href="index.html">Главная</a></li>
+                            <li><a href="services.html">Услуги</a></li>
+                            <li><a href="portfolio.html">Портфолио</a></li>
+                            <li><a href="contact.html">Контакты</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Услуги</h4>
+                        <ul>
+                            <li><a href="services.html">Сайт-визитка</a></li>
+                            <li><a href="services.html">Лендинг</a></li>
+                            <li><a href="services.html">Корпоративный сайт</a></li>
+                            <li><a href="services.html">Интернет-магазин</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Контакты</h4>
+                        <ul>
+                            <li><a href="mailto:your@email.com">your@email.com</a></li>
+                            <li><a href="tel:+79001234567">+7 (900) 123-45-67</a></li>
+                            <li><a href="https://t.me/your_telegram" target="_blank">Telegram</a></li>
+                            <li><a href="https://github.com/your_github" target="_blank">GitHub</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2024 Веб-разработчик. Все права защищены.</p>
+                <p>Создано с ❤️ для вашего бизнеса</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
