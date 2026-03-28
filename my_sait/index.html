@@ -3,352 +3,416 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Разработка сайтов под ключ. Создание лендингов, корпоративных сайтов, интернет-магазинов. Индивидуальный подход, адаптивный дизайн, SEO-оптимизация.">
-    <meta name="keywords" content="разработка сайтов, создание сайтов, веб-разработчик, лендинг, корпоративный сайт">
-    <meta name="author" content="Ваше Имя">
-    <title>Веб-разработчик | Создание сайтов под ключ</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+    <meta name="description" content="Портфолио начинающего веб-разработчика. Учусь создавать современные сайты.">
+    <title>Даниил Назаров | Начинающий веб-разработчик</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: system-ui, -apple-system, 'Segoe UI', 'Inter', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 40px 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        /* Карточка профиля */
+        .card {
+            background: white;
+            border-radius: 32px;
+            padding: 40px;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+            margin-bottom: 30px;
+        }
+
+        /* Шапка */
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .avatar {
+            width: 120px;
+            height: 120px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            font-size: 48px;
+            color: white;
+        }
+
+        h1 {
+            font-size: 28px;
+            margin-bottom: 8px;
+            color: #1e293b;
+        }
+
+        .badge {
+            display: inline-block;
+            background: #e2e8f0;
+            padding: 4px 12px;
+            border-radius: 50px;
+            font-size: 14px;
+            color: #475569;
+            margin-bottom: 16px;
+        }
+
+        .status {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: #dcfce7;
+            color: #166534;
+            padding: 6px 14px;
+            border-radius: 50px;
+            font-size: 14px;
+            margin-top: 12px;
+        }
+
+        .status-dot {
+            width: 8px;
+            height: 8px;
+            background: #22c55e;
+            border-radius: 50%;
+            animation: pulse 1.5s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.5; }
+        }
+
+        /* Секции */
+        .section-title {
+            font-size: 20px;
+            font-weight: 600;
+            color: #1e293b;
+            margin-bottom: 20px;
+            padding-bottom: 8px;
+            border-bottom: 3px solid #667eea;
+            display: inline-block;
+        }
+
+        .about-text {
+            color: #475569;
+            line-height: 1.6;
+            margin-top: 15px;
+        }
+
+        /* Навыки */
+        .skills-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 15px;
+        }
+
+        .skill-tag {
+            background: #f1f5f9;
+            padding: 8px 16px;
+            border-radius: 50px;
+            font-size: 14px;
+            color: #334155;
+            transition: all 0.2s;
+        }
+
+        .skill-tag:hover {
+            background: #667eea;
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        /* Проекты */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            margin-top: 15px;
+        }
+
+        .project-card {
+            background: #f8fafc;
+            border-radius: 20px;
+            padding: 20px;
+            transition: transform 0.2s;
+        }
+
+        .project-card:hover {
+            transform: translateY(-4px);
+        }
+
+        .project-icon {
+            font-size: 32px;
+            margin-bottom: 12px;
+        }
+
+        .project-card h3 {
+            font-size: 18px;
+            margin-bottom: 8px;
+            color: #1e293b;
+        }
+
+        .project-card p {
+            font-size: 14px;
+            color: #64748b;
+            margin-bottom: 12px;
+        }
+
+        .project-link {
+            display: inline-block;
+            color: #667eea;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 500;
+        }
+
+        .project-link:hover {
+            text-decoration: underline;
+        }
+
+        /* Контакты */
+        .contacts-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-top: 15px;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            background: #f1f5f9;
+            padding: 10px 20px;
+            border-radius: 50px;
+            text-decoration: none;
+            color: #334155;
+            transition: all 0.2s;
+        }
+
+        .contact-item:hover {
+            background: #667eea;
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        /* Форма */
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 12px 16px;
+            border: 1px solid #e2e8f0;
+            border-radius: 16px;
+            font-family: inherit;
+            font-size: 14px;
+            transition: border-color 0.2s;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #667eea;
+        }
+
+        .btn {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            padding: 12px 28px;
+            border-radius: 50px;
+            font-size: 16px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+        }
+
+        .form-note {
+            font-size: 12px;
+            color: #94a3b8;
+            margin-top: 12px;
+            text-align: center;
+        }
+
+        /* Футер */
+        .footer {
+            text-align: center;
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 14px;
+            margin-top: 20px;
+        }
+
+        hr {
+            margin: 30px 0;
+            border: none;
+            border-top: 1px solid #e2e8f0;
+        }
+
+        @media (max-width: 600px) {
+            .card {
+                padding: 24px;
+            }
+            h1 {
+                font-size: 24px;
+            }
+        }
+    </style>
 </head>
 <body>
-    <!-- Шапка -->
-    <header class="header">
-        <div class="container">
-            <nav class="navbar">
-                <div class="logo">
-                    <a href="index.html">
-                        <span class="logo-bracket">&lt;</span>
-                        <span class="logo-text">WebDev</span>
-                        <span class="logo-bracket">/&gt;</span>
-                    </a>
+    <div class="container">
+        <!-- Главная карточка -->
+        <div class="card">
+            <div class="header">
+                <div class="avatar">
+                    👨‍💻
                 </div>
-                <button class="mobile-menu-btn" id="mobileMenuBtn">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </button>
-                <ul class="nav-menu" id="navMenu">
-                    <li><a href="index.html" class="active">Главная</a></li>
-                    <li><a href="services.html">Услуги</a></li>
-                    <li><a href="portfolio.html">Портфолио</a></li>
-                    <li><a href="contact.html">Контакты</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
-
-    <main>
-        <!-- Герой секция -->
-        <section class="hero">
-            <div class="container">
-                <div class="hero-wrapper">
-                    <div class="hero-content">
-                        <div class="hero-badge">
-                            <span class="badge-dot"></span>
-                            Доступен для новых проектов
-                        </div>
-                        <h1 class="hero-title">
-                            Создаю сайты,<br>
-                            которые <span class="highlight">работают</span>
-                        </h1>
-                        <p class="hero-description">
-                            Разработка сайтов под ключ: от лендинга до интернет-магазина. 
-                            Адаптивный дизайн, быстрая загрузка, SEO-оптимизация — всё, 
-                            что нужно для успеха вашего бизнеса в интернете.
-                        </p>
-                        <div class="hero-buttons">
-                            <a href="contact.html" class="btn btn-primary">Заказать сайт</a>
-                            <a href="portfolio.html" class="btn btn-outline">Портфолио →</a>
-                        </div>
-                        <div class="hero-stats">
-                            <div class="stat">
-                                <span class="stat-number">5+</span>
-                                <span class="stat-label">лет опыта</span>
-                            </div>
-                            <div class="stat">
-                                <span class="stat-number">50+</span>
-                                <span class="stat-label">проектов</span>
-                            </div>
-                            <div class="stat">
-                                <span class="stat-number">100%</span>
-                                <span class="stat-label">довольных клиентов</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="hero-code">
-                        <div class="code-window">
-                            <div class="code-header">
-                                <span class="code-dot red"></span>
-                                <span class="code-dot yellow"></span>
-                                <span class="code-dot green"></span>
-                                <span class="code-title">portfolio.tsx</span>
-                            </div>
-                            <div class="code-content">
-                                <pre><code><span class="code-keyword">function</span> <span class="code-function">Developer</span>() {
-  <span class="code-keyword">const</span> skills = [<span class="code-string">'React'</span>, <span class="code-string">'TypeScript'</span>, <span class="code-string">'Node.js'</span>];
-  
-  <span class="code-keyword">return</span> (
-    <span class="code-tag">&lt;Developer</span>
-      <span class="code-attr">experience</span>=<span class="code-string">"5+ years"</span>
-      <span class="code-attr">clients</span>=<span class="code-string">"50+ satisfied"</span>
-    <span class="code-tag">/&gt;</span>
-  );
-}</code></pre>
-                            </div>
-                        </div>
-                    </div>
+                <h1>Даниил Назаров</h1>
+                <div class="badge">Начинающий веб-разработчик</div>
+                <div class="status">
+                    <span class="status-dot"></span>
+                    Открыт к сотрудничеству и обучению
                 </div>
             </div>
-        </section>
 
-        <!-- Технологии -->
-        <section class="tech-stack">
-            <div class="container">
-                <p class="tech-label">Работаю с современными технологиями</p>
-                <div class="tech-grid">
-                    <div class="tech-item">
-                        <div class="tech-icon">⚛️</div>
-                        <span>React</span>
-                    </div>
-                    <div class="tech-item">
-                        <div class="tech-icon">📘</div>
-                        <span>TypeScript</span>
-                    </div>
-                    <div class="tech-item">
-                        <div class="tech-icon">🟢</div>
-                        <span>Node.js</span>
-                    </div>
-                    <div class="tech-item">
-                        <div class="tech-icon">🐍</div>
-                        <span>Python</span>
-                    </div>
-                    <div class="tech-item">
-                        <div class="tech-icon">💻</div>
-                        <span>PHP</span>
-                    </div>
-                    <div class="tech-item">
-                        <div class="tech-icon">🗄️</div>
-                        <span>MySQL</span>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Услуги кратко -->
-        <section class="services-short">
-            <div class="container">
-                <h2 class="section-title">Что я создаю</h2>
-                <div class="services-grid-short">
-                    <div class="service-card">
-                        <div class="service-icon">🌐</div>
-                        <h3>Сайт-визитка</h3>
-                        <p>Идеальное решение для малого бизнеса, фрилансеров и стартапов</p>
-                        <div class="service-price">от 15 000 ₽</div>
-                    </div>
-                    <div class="service-card">
-                        <div class="service-icon">📈</div>
-                        <h3>Лендинг</h3>
-                        <p>Продающая страница для вашего продукта или услуги</p>
-                        <div class="service-price">от 20 000 ₽</div>
-                    </div>
-                    <div class="service-card">
-                        <div class="service-icon">🏢</div>
-                        <h3>Корпоративный сайт</h3>
-                        <p>Полноценный сайт для компании с каталогом и новостями</p>
-                        <div class="service-price">от 35 000 ₽</div>
-                    </div>
-                    <div class="service-card">
-                        <div class="service-icon">🛒</div>
-                        <h3>Интернет-магазин</h3>
-                        <p>Полноценная торговая платформа с корзиной и оплатой</p>
-                        <div class="service-price">от 60 000 ₽</div>
-                    </div>
-                </div>
-                <div class="text-center">
-                    <a href="services.html" class="btn btn-secondary">Все услуги →</a>
-                </div>
-            </div>
-        </section>
-
-        <!-- Преимущества работы со мной -->
-        <section class="advantages">
-            <div class="container">
-                <h2 class="section-title">Почему выбирают меня</h2>
-                <div class="advantages-grid">
-                    <div class="advantage-item">
-                        <div class="advantage-number">01</div>
-                        <h3>Индивидуальный подход</h3>
-                        <p>Каждый проект уникален. Я не использую шаблоны — создаю дизайн специально под ваши задачи.</p>
-                    </div>
-                    <div class="advantage-item">
-                        <div class="advantage-number">02</div>
-                        <h3>Адаптивность</h3>
-                        <p>Сайты отлично выглядят на всех устройствах: от смартфонов до 4K-мониторов.</p>
-                    </div>
-                    <div class="advantage-item">
-                        <div class="advantage-number">03</div>
-                        <h3>SEO-оптимизация</h3>
-                        <p>Код сайта сразу готов к продвижению в поисковых системах.</p>
-                    </div>
-                    <div class="advantage-item">
-                        <div class="advantage-number">04</div>
-                        <h3>Быстрая загрузка</h3>
-                        <p>Оптимизация изображений и кода для максимальной скорости.</p>
-                    </div>
-                    <div class="advantage-item">
-                        <div class="advantage-number">05</div>
-                        <h3>Поддержка 24/7</h3>
-                        <p>После запуска я всегда на связи для решения любых вопросов.</p>
-                    </div>
-                    <div class="advantage-item">
-                        <div class="advantage-number">06</div>
-                        <h3>Безопасность</h3>
-                        <p>SSL-сертификаты, защита от взлома, регулярные бэкапы.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Процесс работы -->
-        <section class="process">
-            <div class="container">
-                <h2 class="section-title">Как мы работаем</h2>
-                <div class="process-steps">
-                    <div class="step">
-                        <div class="step-number">1</div>
-                        <h3>Брифинг</h3>
-                        <p>Обсуждаем задачи, цели и пожелания</p>
-                    </div>
-                    <div class="step-arrow">→</div>
-                    <div class="step">
-                        <div class="step-number">2</div>
-                        <h3>Прототип</h3>
-                        <p>Создаём структуру и макет сайта</p>
-                    </div>
-                    <div class="step-arrow">→</div>
-                    <div class="step">
-                        <div class="step-number">3</div>
-                        <h3>Дизайн</h3>
-                        <p>Разрабатываем уникальный дизайн</p>
-                    </div>
-                    <div class="step-arrow">→</div>
-                    <div class="step">
-                        <div class="step-number">4</div>
-                        <h3>Вёрстка</h3>
-                        <p>Превращаем дизайн в рабочий сайт</p>
-                    </div>
-                    <div class="step-arrow">→</div>
-                    <div class="step">
-                        <div class="step-number">5</div>
-                        <h3>Запуск</h3>
-                        <p>Тестирование и публикация на сервере</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Отзывы -->
-        <section class="reviews">
-            <div class="container">
-                <h2 class="section-title">Отзывы клиентов</h2>
-                <div class="reviews-grid">
-                    <div class="review-card">
-                        <div class="review-text">
-                            "Заказал лендинг для своего бизнеса. Всё сделано качественно, быстро и в срок. 
-                            После запуска продажи выросли на 40%. Рекомендую!"
-                        </div>
-                        <div class="review-author">
-                            <strong>Алексей</strong>
-                            <span>Владелец стоматологии</span>
-                        </div>
-                    </div>
-                    <div class="review-card">
-                        <div class="review-text">
-                            "Отличный специалист! Создал интернет-магазин под ключ. 
-                            Все мои пожелания учтены, поддержка после запуска на высоте."
-                        </div>
-                        <div class="review-author">
-                            <strong>Екатерина</strong>
-                            <span>Владелец магазина одежды</span>
-                        </div>
-                    </div>
-                    <div class="review-card">
-                        <div class="review-text">
-                            "Сайт-визитку сделали за 5 дней. Очень доволен результатом, 
-                            всё современно и удобно. Буду рекомендовать знакомым."
-                        </div>
-                        <div class="review-author">
-                            <strong>Михаил</strong>
-                            <span>Фотограф</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- CTA секция -->
-        <section class="cta">
-            <div class="container">
-                <div class="cta-wrapper">
-                    <h2>Готов начать проект?</h2>
-                    <p>Оставьте заявку, и я свяжусь с вами в течение 24 часов</p>
-                    <a href="contact.html" class="btn btn-primary btn-large">Обсудить проект →</a>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <!-- Подвал -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-info">
-                    <div class="footer-logo">
-                        <span class="logo-bracket">&lt;</span>
-                        <span>WebDev</span>
-                        <span class="logo-bracket">/&gt;</span>
-                    </div>
-                    <p>Создаю сайты, которые помогают бизнесу расти</p>
-                </div>
-                <div class="footer-links">
-                    <div class="footer-column">
-                        <h4>Навигация</h4>
-                        <ul>
-                            <li><a href="index.html">Главная</a></li>
-                            <li><a href="services.html">Услуги</a></li>
-                            <li><a href="portfolio.html">Портфолио</a></li>
-                            <li><a href="contact.html">Контакты</a></li>
-                        </ul>
-                    </div>
-                    <div class="footer-column">
-                        <h4>Услуги</h4>
-                        <ul>
-                            <li><a href="services.html">Сайт-визитка</a></li>
-                            <li><a href="services.html">Лендинг</a></li>
-                            <li><a href="services.html">Корпоративный сайт</a></li>
-                            <li><a href="services.html">Интернет-магазин</a></li>
-                        </ul>
-                    </div>
-                    <div class="footer-column">
-                        <h4>Контакты</h4>
-                        <ul>
-                            <li><a href="mailto:your@email.com">your@email.com</a></li>
-                            <li><a href="tel:+79001234567">+7 (900) 123-45-67</a></li>
-                            <li><a href="https://t.me/your_telegram" target="_blank">Telegram</a></li>
-                            <li><a href="https://github.com/your_github" target="_blank">GitHub</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>© 2024 Веб-разработчик. Все права защищены.</p>
-                <p>Создано с ❤️ для вашего бизнеса</p>
+            <!-- О себе -->
+            <div class="about-text">
+                <div class="section-title">📖 О себе</div>
+                <p>Привет! Меня зовут Даниил, я начинающий веб-разработчик. Учусь создавать современные, адаптивные и удобные сайты. Сейчас активно изучаю фронтенд-разработку и стремлюсь развиваться в этой сфере.</p>
+                <p style="margin-top: 12px;">Это мой первый сайт-портфолио, который я создал с нуля. Я открыт к новым проектам, готов учиться и применять полученные знания на практике.</p>
             </div>
         </div>
-    </footer>
 
-    <script src="script.js"></script>
+        <!-- Навыки -->
+        <div class="card">
+            <div class="section-title">🛠️ Чему учусь / что знаю</div>
+            <div class="skills-grid">
+                <span class="skill-tag">HTML5</span>
+                <span class="skill-tag">CSS3</span>
+                <span class="skill-tag">JavaScript (базовый)</span>
+                <span class="skill-tag">Адаптивная вёрстка</span>
+                <span class="skill-tag">Git / GitHub</span>
+                <span class="skill-tag">VS Code</span>
+                <span class="skill-tag">Figma (базово)</span>
+            </div>
+            <p style="font-size: 14px; color: #64748b; margin-top: 16px;">
+                ⚡ Сейчас активно изучаю React и TypeScript
+            </p>
+        </div>
+
+        <!-- Проекты -->
+        <div class="card">
+            <div class="section-title">📁 Мои проекты</div>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-icon">🌐</div>
+                    <h3>Сайт-визитка</h3>
+                    <p>Мой первый полноценный проект — этот сайт. Создан с нуля на HTML/CSS, адаптирован под мобильные устройства.</p>
+                    <a href="#" class="project-link">🔗 Посмотреть →</a>
+                </div>
+                <div class="project-card">
+                    <div class="project-icon">📱</div>
+                    <h3>Landing Page (учебный)</h3>
+                    <p>Практическая работа по созданию продающей страницы. Использовал flexbox, grid, анимации.</p>
+                    <a href="#" class="project-link">🔗 Посмотреть →</a>
+                </div>
+                <div class="project-card">
+                    <div class="project-icon">🔄</div>
+                    <h3>To-Do App (в процессе)</h3>
+                    <p>Простое приложение для задач на JavaScript. Учусь работать с DOM и локальным хранилищем.</p>
+                    <a href="#" class="project-link">🔗 Скоро →</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Контакты -->
+        <div class="card">
+            <div class="section-title">📫 Связаться со мной</div>
+            <div class="contacts-grid">
+                <a href="mailto:daniil@example.com" class="contact-item">
+                    <span>📧</span> daniil@example.com
+                </a>
+                <a href="https://t.me/daniil_nazarov" target="_blank" class="contact-item">
+                    <span>💬</span> Telegram
+                </a>
+                <a href="https://github.com/nazarovdaniil" target="_blank" class="contact-item">
+                    <span>🐙</span> GitHub
+                </a>
+            </div>
+
+            <hr>
+
+            <div class="section-title">✉️ Написать сообщение</div>
+            <form id="contactForm" action="https://formspree.io/f/xgvorgak" method="POST">
+                <div class="form-group">
+                    <input type="text" name="name" placeholder="Ваше имя" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" name="email" placeholder="Ваш email" required>
+                </div>
+                <div class="form-group">
+                    <textarea name="message" rows="4" placeholder="Ваше сообщение..." required></textarea>
+                </div>
+                <button type="submit" class="btn">Отправить сообщение →</button>
+                <p class="form-note">Я отвечу в течение 1-2 дней</p>
+            </form>
+        </div>
+
+        <div class="footer">
+            <p>© 2024 Даниил Назаров | Начинающий веб-разработчик</p>
+            <p style="font-size: 12px; margin-top: 8px;">Сайт создан в учебных целях</p>
+        </div>
+    </div>
+
+    <script>
+        // Форма обратной связи
+        const form = document.getElementById('contactForm');
+        if (form) {
+            form.addEventListener('submit', async (e) => {
+                e.preventDefault();
+                const btn = form.querySelector('button');
+                const originalText = btn.textContent;
+                btn.textContent = 'Отправка...';
+                btn.disabled = true;
+                
+                try {
+                    const formData = new FormData(form);
+                    const response = await fetch(form.action, {
+                        method: 'POST',
+                        body: formData,
+                        headers: { 'Accept': 'application/json' }
+                    });
+                    if (response.ok) {
+                        alert('Спасибо! Сообщение отправлено. Я свяжусь с вами!');
+                        form.reset();
+                    } else {
+                        throw new Error();
+                    }
+                } catch (error) {
+                    alert('Ошибка отправки. Напишите мне напрямую в Telegram.');
+                } finally {
+                    btn.textContent = originalText;
+                    btn.disabled = false;
+                }
+            });
+        }
+    </script>
 </body>
 </html>
