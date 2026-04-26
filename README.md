@@ -16,4 +16,4 @@ Python · C# · Java · JavaScript · SQL · HTML/CSS · Git · Docker · Kali L
 
 ---
 
-© 2025 block-cot
+© 2026 block-cot
